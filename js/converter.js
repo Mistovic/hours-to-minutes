@@ -4,14 +4,15 @@
 
     function toHours() {
         let valMinutes = this.value;
-        inputHours.value = Math.round(valMinutes) / 60;
+        let hours = Math.round(valMinutes) / 60;
+        inputHours.value = hours.toFixed(2)
     }
 
     function toMinutes() {
         let valHours = this.value;
-        inputMinutes.value = Math.round(valHours) * 60;
+        inputMinutes.value = valHours * 60;
     }
 
-    inputMinutes.addEventListener('keyup', toHours);
-    inputHours.addEventListener('keyup', toMinutes);
+    inputMinutes.addEventListener('input', toHours);
+    inputHours.addEventListener('input', toMinutes);
 })();

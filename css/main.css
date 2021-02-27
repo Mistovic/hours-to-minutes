@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/**
+    # Converter CSS
+
+    Content
+    1. # Variables ( Colors )
+    2. # Reset CSS
+    3. # Converter Block
+
+*/
+
+:root {
+    --gray: #f6f8f9;
+    --dark-gray: #dbdde2;
+    --blue: #1c83c6;
+}
+
+/*2. # Reset CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    display: block;
+    padding: 13px 20px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 7px;
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+input[type="number"]:focus {
+    outline: none;
+}
+
+/* 3. # Converter Block */
+
+.converter {
+    background-color: #f6f8f9;
+    display: flex;
+    padding: 2rem 1rem;
+}
+
+.converter__label {
+    color: #646f79;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

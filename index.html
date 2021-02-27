@@ -5,24 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Meta and Titles -->
     <title>Document</title>
 </head>
 
 <body>
+    <section>
+        <div class="default-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <fieldset class="converter">
+                            <div class="converter__input-wrapper">
+                                <label class="converter__label" for="minutes">Minutes</label>
+                                <br>
+                                <input id="minutes" type="number">
+                            </div>
+                            <!-- EOF - .input-wrapper -->
 
-    <div class="wrapper">
-        <div class="input-wrapper">
-            <label for="minutes">Minutes</label>
-            <br>
-            <input id="minutes" type="number">
+                            <span class="equal">=</span>
+
+                            <div class="converter__input-wrapper">
+                                <label class="converter__label" for="hours">Hours</label>
+                                <br>
+                                <input id="hours" type="number">
+                            </div>
+                            <!-- EOF - .input-wrapper -->
+
+                        </fieldset>
+                        <!-- EOF - .converter-wrapper -->
+                    </div>
+                    <!-- EOF - .col-12 -->
+                </div>
+                <!-- EOF - .row -->
+            </div>
+            <!-- EOF - .container-->
         </div>
-        <div class="equal">=</div>
-        <div class="input-wrapper">
-            <label for="hours">Hours</label>
-            <br>
-            <input id="hours" type="number">
-        </div>
-    </div>
+    </section>
+
 
     <script src="./js/converter.js"></script>
 </body>
