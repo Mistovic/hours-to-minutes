@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "./fonts.css";
 /**
     # Converter CSS
 
@@ -10,8 +11,9 @@
 */
 
 :root {
-    --gray: #f6f8f9;
-    --dark-gray: #dbdde2;
+    --light-gray: #f6f8f9;
+    --gray: #dbdde2;
+    --dark-gray: #646f79;
     --blue: #1c83c6;
 }
 
@@ -25,7 +27,7 @@
 }
 
 body {
-    font-family: "Poppins";
+    font-family: "Popins";
 }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button {
@@ -36,21 +38,26 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-i
 input[type="number"] {
     display: block;
     padding: 13px 20px;
-    border: 1px solid var(--dark-gray);
+    border: 1px solid var(--gray);
     border-radius: 7px;
     appearance: textfield;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
+    font-size: 1.125rem;
 }
 
 input[type="number"]:focus {
     outline: none;
+    border: 1px solid var(--dark-gray);
 }
 
 /* 3. # Converter Block */
 
+.default-block {
+    background-color: var(--light-gray);
+}
+
 .converter {
-    background-color: #f6f8f9;
     display: flex;
     padding: 2rem 1rem;
 }
@@ -59,4 +66,33 @@ input[type="number"]:focus {
     color: #646f79;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.converter__sign {
+    width: 100px;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    left: calc(50% - 20px);
+    display: block;
+    height: 7px;
+    width: 40px;
+    background-color: var(--dark-gray);
+    border-radius: 7px;
+}
+
+.line:nth-child(1) {
+    bottom: 15px;
+}
+
+.line:nth-child(2) {
+    bottom: 30px;
+}
+
+.equal::before {
+    content: '';
+    width: 70px;
+    position: absolute;
 }
