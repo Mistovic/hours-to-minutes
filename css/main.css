@@ -7,6 +7,7 @@
     1. # Variables ( Colors )
     2. # Reset CSS
     3. # Converter Block
+    3. # Transition - animations
 
 */
 
@@ -36,14 +37,17 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-i
 }
 
 input[type="number"] {
+    position: relative;
     display: block;
     padding: 13px 20px;
     border: 1px solid var(--gray);
     border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.9);
     appearance: textfield;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     font-size: 1.125rem;
+    z-index: 2;
 }
 
 input[type="number"]:focus {
@@ -58,14 +62,20 @@ input[type="number"]:focus {
 }
 
 .converter {
+    position: relative;
     display: flex;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
 }
 
 .converter__label {
     color: #646f79;
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: 600;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: 0.2s all ease-in;
 }
 
 .converter__sign {
@@ -95,4 +105,10 @@ input[type="number"]:focus {
     content: '';
     width: 70px;
     position: absolute;
+}
+
+/* 4. # Transitions - animations */
+
+input[type="number"]:focus~.converter__label {
+    font-size: 1.7rem;
 }
