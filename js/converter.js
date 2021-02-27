@@ -4,8 +4,9 @@
 
     function toHours(input) {
         let valMinutes = input.value;
+        if (valMinutes == "" || valMinutes == null) { inputHours.value = ''; return }
         let hours = Math.round(valMinutes) / 60;
-        inputHours.value = hours.toFixed(2)
+        inputHours.value = hours.toFixed(2);
     }
 
     function toMinutes(input) {
@@ -15,14 +16,13 @@
 
     function animation(input) {
         let val = input.value;
-        console.log('Blur', val)
-        let parent = input.parentNode;
         let label = input.nextElementSibling;
+
         if (val != 0 || val != '') {
-            label.style = "font-size: 1.5rem"
-            console.log('Jesmo li dobrii', label)
+            label.style = "opacity: 0;"
+            console.log('oapciti  0')
         } else {
-            label.style = "font-size: 4rem";
+            label.style = "opacity: 1;";
 
         }
     }
@@ -31,10 +31,12 @@
     // Input event
     inputMinutes.addEventListener('input', function () {
         toHours(this);
+        animation(inputHours);
         animation(this);
     });
     inputHours.addEventListener('input', function () {
         toMinutes(this);
+        animation(inputMinutes);
         animation(this);
     });
 

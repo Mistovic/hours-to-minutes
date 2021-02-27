@@ -5,7 +5,7 @@
 
     Content
     1. # Variables ( Colors )
-    2. # Reset CSS
+    2. # Reset CSS & Basic styling
     3. # Converter Block
     3. # Transition - animations
 
@@ -18,7 +18,7 @@
     --blue: #1c83c6;
 }
 
-/*2. # Reset CSS */
+/*2. # Reset CSS & Basic styling */
 
 * {
     box-sizing: border-box;
@@ -29,6 +29,28 @@
 
 body {
     font-family: "Popins";
+    color: var(--dark-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #121a26;
+    font-weight: 600;
+    line-height: 1;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 3.125rem;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 13px !important;
+    font-size: 0.875rem !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button {
@@ -40,7 +62,7 @@ input[type="number"] {
     position: relative;
     display: block;
     padding: 13px 20px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--blue);
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.9);
     appearance: textfield;
@@ -57,25 +79,35 @@ input[type="number"]:focus {
 
 /* 3. # Converter Block */
 
-.default-block {
+.deafult-section {
     background-color: var(--light-gray);
+    padding: 100px 0;
 }
 
 .converter {
     position: relative;
     display: flex;
-    padding: 3rem 1rem;
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.deafult-section h1, .deafult-section.subtitle {
+    text-align: center;
 }
 
 .converter__label {
-    color: #646f79;
-    font-size: 4rem;
-    font-weight: 600;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+    top: calc(50% - 14px);
+    display: block;
+    padding-left: 25px;
+    color: var(--blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 3;
     transition: 0.2s all ease-in;
+    pointer-events: none;
+    text-align: left;
 }
 
 .converter__sign {
@@ -85,12 +117,13 @@ input[type="number"]:focus {
 
 .line {
     position: absolute;
-    left: calc(50% - 20px);
+    left: calc(50% - 15px);
     display: block;
-    height: 7px;
-    width: 40px;
-    background-color: var(--dark-gray);
+    height: 4px;
+    width: 30px;
+    background-color: var(--blue);
     border-radius: 7px;
+    z-index: 3;
 }
 
 .line:nth-child(1) {
@@ -110,5 +143,6 @@ input[type="number"]:focus {
 /* 4. # Transitions - animations */
 
 input[type="number"]:focus~.converter__label {
-    font-size: 1.7rem;
+    /* font-size: 1.5rem; */
+    color: var(--dark-gray);
 }
