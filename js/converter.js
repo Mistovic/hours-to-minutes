@@ -2,6 +2,10 @@
     var inputMinutes = document.getElementById('minutes');
     var inputHours = document.getElementById('hours');
 
+
+    /*
+        Convert minutes to decimal hours
+    */
     function toHours(input) {
         let valMinutes = input.value;
         if (valMinutes == "" || valMinutes == null) { inputHours.value = ''; return }
@@ -9,11 +13,23 @@
         inputHours.value = hours.toFixed(2);
     }
 
+
+    /**
+     * Convert decimal hours to minutes 
+     * @param {*} input 
+     * Takes input from whom event is trigered
+     */
     function toMinutes(input) {
         let valHours = input.value;
+        if (valHours == "" || valHours == null) { inputMinutes.value = ''; return }
         inputMinutes.value = valHours * 60;
     }
 
+    /**
+     * Animates labels
+     * @param {element} input 
+     * Takes input elemnt as event trigerer
+     */
     function animation(input) {
         let val = input.value;
         let label = input.nextElementSibling;
@@ -25,6 +41,13 @@
             label.style = "opacity: 1;";
 
         }
+    }
+
+    function pushEqual(input) {
+        let val = input.value;
+        let label = input.nextElementSibling;
+
+        label.classList.toggle('active');
     }
 
 
@@ -39,5 +62,21 @@
         animation(inputMinutes);
         animation(this);
     });
+
+    inputMinutes.addEventListener('focus', function () {
+        pushEqual(inputHours);
+    });
+
+    inputHours.addEventListener('focus', function () {
+        pushEqual(inputMinutes);
+    })
+
+    inputMinutes.addEventListener('blur', function () {
+        pushEqual(inputHours);
+    });
+
+    inputHours.addEventListener('blur', function () {
+        pushEqual(inputMinutes);
+    })
 
 })();
