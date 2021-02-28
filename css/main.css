@@ -93,7 +93,7 @@ input[type="number"]:focus {
     text-align: center;
     justify-content: space-between;
     max-width: 600px;
-    margin: 50px auto;
+    margin: 100px auto 100px;
 }
 
 .converter__input-wrapper {
@@ -111,7 +111,7 @@ input[type="number"]:focus {
     padding-left: 25px;
     color: var(--blue);
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     z-index: 3;
     transition: 0.2s all ease-in;
     pointer-events: none;
@@ -126,7 +126,7 @@ input[type="number"]:focus {
     content: '';
     position: absolute;
     display: block;
-    width: 15px;
+    width: 12px;
     height: 3px;
     background-color: var(--blue);
     border-radius: 7px;
@@ -208,5 +208,153 @@ input[type="number"]:focus~.converter__label {
     }
     .line:nth-child(1) {
         bottom: 5px;
+    }
+}
+
+/* Imported CSS */
+
+/* Decimal Conversion Page Css */
+
+.convertor-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Popins";
+}
+
+.rTableRow {
+    display: table-row;
+}
+
+.rTableRow:nth-child(2n) {
+    background-color: var(--gray);
+}
+
+.rTableHeading {
+    display: table-header-group;
+    background-color: #ddd;
+}
+
+.rTableCell, .rTableHead {
+    display: table-cell;
+    padding: 10px 10px;
+    border: 1px solid var(--gray);
+    text-align: center;
+}
+
+.rTableHeading {
+    display: table-header-group;
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+.rTableFoot {
+    display: table-footer-group;
+    font-weight: bold;
+    background-color: #ddd;
+}
+
+.rTableBody {
+    display: table-row-group;
+}
+
+.FirstHeadingBac {
+    background: var(--blue);
+    color: #fff;
+}
+
+.FirstHeadingBac .rTableCell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Mobileiesue table {
+    margin: auto;
+    display: table;
+    float: none;
+}
+
+.minutescolor {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.Mobileiesue h3 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.EquelClasdd {
+    padding: 0 10px 0 10px;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .FirstHeadingBac {
+        display: none !important;
+    }
+    .rTableRow {
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 0 0 15px;
+    }
+    .rTableCell:nth-child(1) {
+        border-top: 1px solid var(--gray);
+    }
+    .rTableCell {
+        position: relative;
+        width: 100%;
+        padding-left: 50%;
+        box-sizing: border-box;
+        float: left;
+        border-bottom: 1px solid var(--gray);
+        border-right: 1px solid var(--gray);
+        border-left: 1px solid var(--gray);
+        border-top: none;
+    }
+    .rTableCell::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        padding: 8px;
+        text-align: left;
+        background: var(--blue);
+        color: #fff;
+        bottom: 0;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .rTableCell, .rTableHead {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .rTableCell:nth-child(1):before {
+        content: "Minute";
+    }
+    .rTableCell:nth-child(2):before {
+        content: "Decimal";
+    }
+    .rTableCell:nth-child(3):before {
+        content: "Minute";
+    }
+    .rTableCell:nth-child(4):before {
+        content: "Decimal";
+    }
+    .rTableCell:nth-child(5):before {
+        content: "Minute";
+    }
+    .rTableCell:nth-child(6):before {
+        content: "Decimal";
+    }
+    #miniAppContainer .Mobileiesue {
+        width: 100% !important;
+        max-width: 400px;
+        margin: auto;
+        display: table;
+    }
+    .minutescolor {
+        font-size: 15px;
     }
 }
