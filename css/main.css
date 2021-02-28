@@ -10,6 +10,7 @@
                 2: # Reset CSS & Basic styling
                 3: # Converter Block
                 4: # Transitions - Animations
+                5: # Table CSS
             }
     */
 
@@ -43,6 +44,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     margin-bottom: 30px;
     font-size: 3.125rem;
+}
+
+h2 {
+    margin-bottom: 26px;
+    font-size: 2.625rem;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+h4 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
 }
 
 .subtitle {
@@ -88,12 +104,26 @@ input[type="number"]:focus {
 }
 
 .converter {
+    max-width: 600px;
+    margin: 0px auto 100px;
+}
+
+hr:first-of-type {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient( 90deg, rgba(28, 131, 198, 1) 0%, rgba(34, 178, 76, 1) 100%);
+    margin: 40px auto 56px;
+}
+
+.converter__wraper {
     position: relative;
     display: flex;
     text-align: center;
     justify-content: space-between;
-    max-width: 600px;
-    margin: 100px auto 100px;
+}
+
+.converter h3, .converter h4 {
+    text-align: center;
 }
 
 .converter__input-wrapper {
@@ -179,13 +209,10 @@ input[type="number"]:focus {
 /* 4. # Transitions - animations */
 
 input[type="number"]:focus~.converter__label {
-    /* font-size: 1.5rem; */
     color: var(--dark-gray);
 }
 
 .converter__input-wrapper.active input {
-    /* font-size: 1.2rem;
-    font-weight: 600; */
     color: var(--blue);
 }
 
@@ -194,7 +221,7 @@ input[type="number"]:focus~.converter__label {
 }
 
 @media screen and (max-width: 768px) {
-    .converter {
+    .converter__wraper {
         flex-direction: column;
         height: 150px;
         justify-content: space-between;
@@ -211,9 +238,7 @@ input[type="number"]:focus~.converter__label {
     }
 }
 
-/* Imported CSS */
-
-/* Decimal Conversion Page Css */
+/* 5. #  Table CSS */
 
 .convertor-table {
     display: table;
@@ -222,66 +247,33 @@ input[type="number"]:focus~.converter__label {
     font-family: "Popins";
 }
 
-.rTableRow {
+.convertor-table__row {
     display: table-row;
 }
 
-.rTableRow:nth-child(2n) {
-    background-color: var(--gray);
+.convertor-table__row:nth-child(2n) {
+    background-color: #fff;
 }
 
-.rTableHeading {
-    display: table-header-group;
-    background-color: #ddd;
-}
-
-.rTableCell, .rTableHead {
+.convertor-table__cell {
     display: table-cell;
     padding: 10px 10px;
     border: 1px solid var(--gray);
     text-align: center;
 }
 
-.rTableHeading {
-    display: table-header-group;
-    background-color: #ddd;
-    font-weight: bold;
-}
-
-.rTableFoot {
-    display: table-footer-group;
-    font-weight: bold;
-    background-color: #ddd;
-}
-
-.rTableBody {
+.convertor-table__body {
     display: table-row-group;
 }
 
-.FirstHeadingBac {
+.heading-row {
     background: var(--blue);
     color: #fff;
 }
 
-.FirstHeadingBac .rTableCell {
+.heading-row .convertor-table__cell {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.Mobileiesue table {
-    margin: auto;
-    display: table;
-    float: none;
-}
-
-.minutescolor {
-    color: #fff;
-    text-transform: capitalize;
-}
-
-.Mobileiesue h3 {
-    color: #fff;
-    margin-bottom: 0;
 }
 
 .EquelClasdd {
@@ -290,19 +282,19 @@ input[type="number"]:focus~.converter__label {
 }
 
 @media (max-width: 767px) {
-    .FirstHeadingBac {
+    .heading-row {
         display: none !important;
     }
-    .rTableRow {
+    .convertor-table__row {
         display: block;
         float: left;
         width: 100%;
         margin: 0 0 15px;
     }
-    .rTableCell:nth-child(1) {
+    .convertor-table__cell:nth-child(1) {
         border-top: 1px solid var(--gray);
     }
-    .rTableCell {
+    .convertor-table__cell {
         position: relative;
         width: 100%;
         padding-left: 50%;
@@ -313,7 +305,7 @@ input[type="number"]:focus~.converter__label {
         border-left: 1px solid var(--gray);
         border-top: none;
     }
-    .rTableCell::before {
+    .convertor-table__cell::before {
         position: absolute;
         left: 0;
         top: 0;
@@ -326,35 +318,26 @@ input[type="number"]:focus~.converter__label {
         font-weight: bold;
         font-size: 15px;
     }
-    .rTableCell, .rTableHead {
+    .convertor-table__cell, .rTableHead {
         padding-top: 6px;
         padding-bottom: 6px;
     }
-    .rTableCell:nth-child(1):before {
+    .convertor-table__cell:nth-child(1):before {
         content: "Minute";
     }
-    .rTableCell:nth-child(2):before {
+    .convertor-table__cell:nth-child(2):before {
         content: "Decimal";
     }
-    .rTableCell:nth-child(3):before {
+    .convertor-table__cell:nth-child(3):before {
         content: "Minute";
     }
-    .rTableCell:nth-child(4):before {
+    .convertor-table__cell:nth-child(4):before {
         content: "Decimal";
     }
-    .rTableCell:nth-child(5):before {
+    .convertor-table__cell:nth-child(5):before {
         content: "Minute";
     }
-    .rTableCell:nth-child(6):before {
+    .convertor-table__cell:nth-child(6):before {
         content: "Decimal";
-    }
-    #miniAppContainer .Mobileiesue {
-        width: 100% !important;
-        max-width: 400px;
-        margin: auto;
-        display: table;
-    }
-    .minutescolor {
-        font-size: 15px;
     }
 }
