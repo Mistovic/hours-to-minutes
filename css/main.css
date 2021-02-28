@@ -105,14 +105,14 @@ input[type="number"]:focus {
 
 .converter {
     max-width: 600px;
-    margin: 0px auto 100px;
+    margin: 50px auto 100px;
 }
 
 hr:first-of-type {
     width: 80px;
     height: 3px;
     background: linear-gradient( 90deg, rgba(28, 131, 198, 1) 0%, rgba(34, 178, 76, 1) 100%);
-    margin: 40px auto 56px;
+    margin: 20px auto 40px;
 }
 
 .converter__wraper {
@@ -269,16 +269,12 @@ input[type="number"]:focus~.converter__label {
 .heading-row {
     background: var(--blue);
     color: #fff;
+    font-size: 1rem;
 }
 
 .heading-row .convertor-table__cell {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.EquelClasdd {
-    padding: 0 10px 0 10px;
-    color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -316,7 +312,7 @@ input[type="number"]:focus~.converter__label {
         color: #fff;
         bottom: 0;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 1rem;
     }
     .convertor-table__cell, .rTableHead {
         padding-top: 6px;
