@@ -1,11 +1,27 @@
 (() => {
+    /**
+        * # Minutes to Hours to Minutes - Converter
+        * 
+        * # Website  : Timerack 
+        * # Dev      : Vuk Mistovic
+        * # Content  : {
+            1: # Variables ( Input Elements )
+            2: # To hours  ( function ) - tranlsates minutes to hours
+            3: # To minutes ( function ) - translates hours to minutes
+            4: # Animation ( function ) - Hide / Show label if input is empty / has value
+            5: # addSign ( function ) - Add equal signt to label elemnt
+        }
+    */
+
     var inputMinutes = document.getElementById('minutes');
     var inputHours = document.getElementById('hours');
 
 
-    /*
-        Convert minutes to decimal hours
-    */
+    /**
+     * Convert minutes  to decimal hours
+     * @param {element} input 
+     * Takes input from whom event is trigered
+     */
     function toHours(input) {
         let valMinutes = input.value;
         if (valMinutes == "" || valMinutes == null) { inputHours.value = ''; return }
@@ -13,10 +29,9 @@
         inputHours.value = hours.toFixed(2);
     }
 
-
     /**
      * Convert decimal hours to minutes 
-     * @param {*} input 
+     * @param {element} input 
      * Takes input from whom event is trigered
      */
     function toMinutes(input) {
@@ -28,25 +43,33 @@
     /**
      * Animates labels
      * @param {element} input 
-     * Takes input elemnt as event trigerer
+     * Takes input elemnt from whom event is trigered
      */
     function animation(input) {
         let val = input.value;
         let label = input.nextElementSibling;
 
         if (val != 0 || val != '') {
-            label.style = "opacity: 0;"
-            console.log('oapciti  0')
+            label.style = "left: 60%;font-size: 0.85rem";
+            label.classList.add('is-moved')
+
         } else {
-            label.style = "opacity: 1;";
+            label.classList.remove('is-moved')
+            label.style = "left: 1;font-size: 1.2rem";;
 
         }
     }
 
-    function pushEqual(input) {
+    /**
+     * Add equal sign on labels
+     * @param {element} input 
+     * Takes input elemnt from whom event is trigered
+     */
+    function addSign(input) {
         let val = input.value;
         let label = input.nextElementSibling;
-
+        let parent = input.parentNode;
+        parent.classList.toggle('active');
         label.classList.toggle('active');
     }
 
@@ -63,20 +86,22 @@
         animation(this);
     });
 
+    // Focus event
     inputMinutes.addEventListener('focus', function () {
-        pushEqual(inputHours);
+        addSign(inputHours);
     });
 
     inputHours.addEventListener('focus', function () {
-        pushEqual(inputMinutes);
+        addSign(inputMinutes);
     })
 
+    // Blur event
     inputMinutes.addEventListener('blur', function () {
-        pushEqual(inputHours);
+        addSign(inputHours);
     });
 
     inputHours.addEventListener('blur', function () {
-        pushEqual(inputMinutes);
+        addSign(inputMinutes);
     })
 
 })();

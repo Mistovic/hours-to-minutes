@@ -1,15 +1,17 @@
 @charset "UTF-8";
 @import "./fonts.css";
 /**
-    # Converter CSS
-
-    Content
-    1. # Variables ( Colors )
-    2. # Reset CSS & Basic styling
-    3. # Converter Block
-    3. # Transition - animations
-
-*/
+        * # Minutes to Hours to Minutes - Converter
+        * 
+        * # Website  : Timerack 
+        * # Dev      : Vuk Mistovic
+        * # Content  : {
+                1: # Variables ( Colors )
+                2: # Reset CSS & Basic styling
+                3: # Converter Block
+                4: # Transitions - Animations
+            }
+    */
 
 :root {
     --light-gray: #f6f8f9;
@@ -18,7 +20,7 @@
     --blue: #1c83c6;
 }
 
-/*2. # Reset CSS & Basic styling */
+/* 2. # Reset CSS & Basic styling */
 
 * {
     box-sizing: border-box;
@@ -61,14 +63,15 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-i
 input[type="number"] {
     position: relative;
     display: block;
-    padding: 13px 20px;
+    width: 250px;
+    padding: 13px 100px 13px 20px;
     border: 1px solid var(--blue);
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.9);
     appearance: textfield;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     z-index: 2;
 }
 
@@ -115,15 +118,15 @@ input[type="number"]:focus {
     text-align: left;
 }
 
-.converter__label.active {
-    padding-left: 50px;
+.converter__label.active:not(.is-moved) {
+    padding-left: 38px;
 }
 
 .converter__label::after, .converter__label::before {
     content: '';
     position: absolute;
     display: block;
-    width: 20px;
+    width: 15px;
     height: 3px;
     background-color: var(--blue);
     border-radius: 7px;
@@ -131,14 +134,18 @@ input[type="number"]:focus {
     transition: 0.4s opacity ease;
 }
 
+.sign {
+    display: none;
+}
+
 .converter__label::after {
     left: 14px;
-    top: 9px;
+    top: calc(50% - 5px);
 }
 
 .converter__label::before {
     left: 14px;
-    bottom: 9px;
+    bottom: calc(50% - 5px);
 }
 
 .converter__label.active::after, .converter__label.active::before {
@@ -169,17 +176,21 @@ input[type="number"]:focus {
     bottom: 30px;
 }
 
-.equal::before {
-    content: '';
-    width: 70px;
-    position: absolute;
-}
-
 /* 4. # Transitions - animations */
 
 input[type="number"]:focus~.converter__label {
     /* font-size: 1.5rem; */
     color: var(--dark-gray);
+}
+
+.converter__input-wrapper.active input {
+    /* font-size: 1.2rem;
+    font-weight: 600; */
+    color: var(--blue);
+}
+
+.converter__input-wrapper.active .converter__label.is-moved::after, .converter__input-wrapper.active .converter__label.is-moved::before {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
