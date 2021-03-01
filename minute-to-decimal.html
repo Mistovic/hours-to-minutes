@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- Critical CSS -->
+		<style>
+			.header__nav>ul>.social-list-wrapper{display:none;}@media only screen and (max-width: 1310px){.header__nav>ul>.social-list-wrapper{display: flex;}}.hero-slider{opacity: 0;}.hero-slider.show{opacity: 1;transition: .5s ease;}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+		<link rel="stylesheet" type="text/css" href="css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/aos.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+		<link href="font-awesome/css/all.min.css" rel="stylesheet">
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="img/favicons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<title>TimeRack - Minutes to Decimal Converter</title>
+	</head>
+	<body>
+		<!-- Beginning of Header -->
+		<header class="header">
+			<div class="header__wrapper">
+				<nav class="header__nav">
+					<div class="header__logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="img/logos/timerackLogo-small.svg" media="(max-width: 440px)" width="50" height="30"/>
+								<img src="img/logos/timerackLogo-big.svg" alt="Timerack Logo" width="140" height="30">
+							</picture>
+						</a>
+					</div>
+					<ul>
+						<li>
+							<a href="#/">About</a>
+							<button class="dropdown-menu-icon">
+								<!-- <img src="img/icons/arrow-down-grey.svg" alt="Icon Phone" width="9" height="5"> -->
+								<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+									<g>
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="8.375" height="4.926"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<g clip-path="url(#SVGID_2_)">
+												<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</button>
+							<div class="mega-menu">
+								<div class="mega-menu__flex">
+									<div class="mega-menu__main">
+										<div class="mega-menu__title">
+											<h3>About us</h3>
+										</div>
+										<div class="mega-menu__list">
+											<ul>
+												<li>
+													<a href="#/">
+														<span>Our Team</span>
+														<p>Donec erat ante, varius eu ipsum et, sollicitudin dignissim neque.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Clients</span>
+														<p>Our diversity of clients reflects the flexibility of our software.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Events</span>
+														<p>Please check for upcoming events.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Careers</span>
+														<p>Pellentesque consectetur tellus in maximus consequat.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Partners</span>
+														<p>We believe in forging strong long term relations with our partners.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>FAQ</span>
+														<p>Praesent bibendum tortor vitae ipsum volutpat fermentum.</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mega-menu__aside">
+										<div class="mega-menu__title">
+											<h3>Contact us</h3>
+										</div>
+										<div class="mega-menu__aside__content">
+											<span>Corporate Office</span>
+											<p>3650 Rogers Rd.</p>
+											<p>Suite 359</p>
+											<p>Wake Forest, NC 27587, USA</p>
+											<a href="#/" class="location mt-10">
+											<img src="img/icons/pin-icon.png" alt="Pin Icon" width="11" height="16">
+											See Our Location
+											</a>
+										</div>
+										<div class="mega-menu__aside__content">
+											<span>Phone</span>
+											<p><a href="tel:+">1-951-284-1500</a>(main)</p>
+											<p><a href="tel:+">1-951-284-1501</a>(fax)</p>
+											<p></p>
+											<p class="mt-10">Mon-Fri: 7am-4pm PST</p>
+										</div>
+									</div>
+								</div>
+								<div class="mega-menu__flex">
+									<div class="mega-menu__phrase">
+										<p>listen.</p>
+										<p>adapt.</p>
+										<p>serve.</p>
+									</div>
+									<div class="mega-menu__aside--bottom mega-menu__aside--social">
+										<div class="social-list-wrapper">
+											<a href="#/">
+											<i class="fab fa-facebook-f"></i>
+											</a>
+											<a href="#/">
+											<i class="fab fa-linkedin-in"></i>
+											</a>
+											<a href="#/">
+											<i class="fab fa-twitter"></i>
+											</a>
+											<a href="#/">
+											<i class="fab fa-youtube"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li  class="current">
+							<a href="#/">Solutions</a>
+							<button class="dropdown-menu-icon">
+								<!-- <img src="img/icons/arrow-down-grey.svg" alt="Icon Phone" width="9" height="5"> -->
+								<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+									<g>
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="8.375" height="4.926"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<g clip-path="url(#SVGID_2_)">
+												<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</button>
+							<div class="mega-menu">
+								<div class="mega-menu__flex">
+									<div class="mega-menu__main">
+										<div class="mega-menu__title">
+											<h3>Our Solutions</h3>
+										</div>
+										<div class="mega-menu__list">
+											<ul >
+												<li  class="current">
+													<a href="#/">
+														<span>Time & Labor</span>
+														<p>Donec erat ante, varius eu ipsum et, sollicitudin dignissim neque.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>T&A Software</span>
+														<p>Donec erat ante, varius eu ipsum et, sollicitudin dignissim neque.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Mobile App</span>
+														<p>Donec dui nibh, pulvinar non viverra ac, sagittis interdum.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>COVID Return to Work</span>
+														<p>Quisque placerat consequat lacus, in sollicitudin sem auctor.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>HR Services</span>
+														<p>Pellentesque consectetur tellus in maximus consequat.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Data Collection - Hardware</span>
+														<p>Pellentesque habitant morbi tristique senectus et netus.</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mega-menu__aside">
+										<div class="mega-menu__title">
+											<h3>Featured</h3>
+										</div>
+										<div class="mega-menu__aside__content">
+											<a href="#/">
+												<div class="featured-card">
+													<div class="featured-card__img">
+														<figure>
+															<img src="img/featured-card-img1.jpg" alt="Cardenas Grocery" width="285" height="155">
+														</figure>
+													</div>
+													<div class="featured-card__desc">
+														<div>
+															<p class="subtitle">Case studies</p>
+															<h3>Cardenas is a grocery store chain outlet which employs over 3,000 employees</h3>
+														</div>
+														<!-- <a href="#/" data-color="#1c83c6">Download &gt;</a> -->
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="mega-menu__flex">
+									<div class="mega-menu__phrase">
+										<p>listen.</p>
+										<p>adapt.</p>
+										<p>serve.</p>
+									</div>
+									<div class="mega-menu__aside--bottom">
+										<a href="#/">Read More<span class="link-arrow"><img src="img/icons/arrow-right-blue--big.svg" alt="Arrow Right Icon" width="10" height="13"></span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="industries-list.html">Industries</a>
+							<button class="dropdown-menu-icon">
+								<!-- <img src="img/icons/arrow-down-grey.svg" alt="Icon Phone" width="9" height="5"> -->
+								<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+									<g>
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="8.375" height="4.926"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<g clip-path="url(#SVGID_2_)">
+												<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</button>
+							<div class="mega-menu">
+								<div class="mega-menu__flex">
+									<div class="mega-menu__main">
+										<div class="mega-menu__title">
+											<h3>Industries</h3>
+										</div>
+										<div class="mega-menu__list">
+											<ul>
+												<li>
+													<a href="#/">
+														<span>Staffing</span>
+														<p>Donec erat ante, varius eu ipsum et, sollicitudin dignissim neque.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Offices</span>
+														<p>Donec dui nibh, pulvinar non viverra ac, sagittis interdum.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Healthcare</span>
+														<p>Quisque placerat consequat lacus, in sollicitudin sem auctor.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Small businesses</span>
+														<p>Pellentesque consectetur tellus in maximus consequat.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Warehouses & Manufacturing</span>
+														<p>Pellentesque habitant morbi tristique senectus et netus.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Restaurants & Hospitality</span>
+														<p>Sed pharetra massa vitae purus suscipit venenatis vitae.</p>
+													</a>
+												</li>
+											</ul>
+											<a href="#/">FAQ
+											<span class="link-arrow">
+											<img src="img/icons/arrow-right-blue--big.svg" alt="Arrow Right Icon" width="10" height="13">
+											</span>
+											</a>
+											<a href="#/">Case Studies
+											<span class="link-arrow">
+											<img src="img/icons/arrow-right-blue--big.svg" alt="Arrow Right Icon" width="10" height="13">
+											</span>
+											</a>
+										</div>
+									</div>
+									<div class="mega-menu__aside">
+										<div class="mega-menu__title">
+											<h3>Payroll Interfaces</h3>
+										</div>
+										<div class="mega-menu__aside__content">
+											<a href="#/">
+												<div class="featured-image">
+													<figure>
+														<img src="img/featured-img1.jpg" alt="Cardenas Grocery" width="285" height="285">
+													</figure>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="mega-menu__flex">
+									<div class="mega-menu__phrase">
+										<p>listen.</p>
+										<p>adapt.</p>
+										<p>serve.</p>
+									</div>
+									<div class="mega-menu__aside--bottom">
+										<a href="#/">See Complete Software List <span class="link-arrow"><img src="img/icons/arrow-right-blue--big.svg" alt="Arrow Right Icon" width="10" height="13"></span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#/">Partner Programs</a>
+							<button class="dropdown-menu-icon">
+								<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+									<g>
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="8.375" height="4.926"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<g clip-path="url(#SVGID_2_)">
+												<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</button>
+							<div class="small-menu">
+								<ul>
+									<li>
+										<a href="#/">Channel Partner Programs</a>
+										<button class="small-menu-icon">
+											<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+												<g>
+													<g>
+														<defs>
+															<rect id="SVGID_1_" width="8.375" height="4.926"/>
+														</defs>
+														<clipPath id="SVGID_2_">
+															<use xlink:href="#SVGID_1_"  overflow="visible"/>
+														</clipPath>
+														<g clip-path="url(#SVGID_2_)">
+															<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+														</g>
+													</g>
+												</g>
+											</svg>
+										</button>
+										<ul>
+											<li>
+												<a href="#/">Level 1</a>
+												<button class="small-menu-icon">
+													<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+														<g>
+															<g>
+																<defs>
+																	<rect id="SVGID_1_" width="8.375" height="4.926"/>
+																</defs>
+																<clipPath id="SVGID_2_">
+																	<use xlink:href="#SVGID_1_"  overflow="visible"/>
+																</clipPath>
+																<g clip-path="url(#SVGID_2_)">
+																	<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+																</g>
+															</g>
+														</g>
+													</svg>
+												</button>
+												<ul>
+													<li><a href="#/">Level 2</a></li>
+													<li><a href="#/">Level 2</a></li>
+												</ul>
+											</li>
+											<li><a href="#/">Level 1</a></li>
+											<li><a href="#/">Level 1</a></li>
+										</ul>
+									</li>
+									<li><a href="#/">Integration Partners</a></li>
+									<li><a href="#/">CPA Partner Program</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#/">Resources</a>
+							<button class="dropdown-menu-icon">
+								<!-- <img src="img/icons/arrow-down-grey.svg" alt="Icon Phone" width="9" height="5"> -->
+								<svg width="10px" height="6px" viewBox="0 0 8.375 4.926" enable-background="new 0 0 8.375 4.926" xml:space="preserve">
+									<g>
+										<g>
+											<defs>
+												<rect id="SVGID_1_" width="8.375" height="4.926"/>
+											</defs>
+											<clipPath id="SVGID_2_">
+												<use xlink:href="#SVGID_1_"  overflow="visible"/>
+											</clipPath>
+											<g clip-path="url(#SVGID_2_)">
+												<polygon fill="#646F79" points="4.219,4.926 0,0.708 0.707,0 4.219,3.512 7.667,0.064 8.375,0.771 			"/>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</button>
+							<div class="mega-menu">
+								<div class="mega-menu__flex">
+									<div class="mega-menu__main">
+										<div class="mega-menu__title">
+											<h3>Our Resources</h3>
+										</div>
+										<div class="mega-menu__list">
+											<ul>
+												<li>
+													<a href="#/">
+														<span>White Papers</span>
+														<p>Donec erat ante, varius eu ipsum et, sollicitudin dignissim neque.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Videos</span>
+														<p>Donec dui nibh, pulvinar non viverra ac, sagittis interdum.</p>
+													</a>
+												</li>
+												<li>
+													<a href="case-studies-list.html">
+														<span>Case studies</span>
+														<p>Quisque placerat consequat lacus, in sollicitudin sem auctor.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Employer Guides</span>
+														<p>Pellentesque consectetur tellus in maximus consequat.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>Blogs</span>
+														<p>Pellentesque habitant morbi tristique senectus et netus.</p>
+													</a>
+												</li>
+												<li>
+													<a href="#/">
+														<span>COVID-19 esource Center</span>
+														<p>Pellentesque habitant morbi tristique senectus et netus.</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mega-menu__aside">
+										<div class="mega-menu__title">
+											<h3>Featured</h3>
+										</div>
+										<div class="mega-menu__aside__content">
+											<div class="featured-card">
+												<div class="featured-card__img">
+													<figure>
+														<img src="img/featured-card-img2.jpg" alt="Cardenas Grocery" width="285" height="155">
+													</figure>
+												</div>
+												<div class="featured-card__desc">
+													<div>
+														<p class="subtitle">WhitePapers</p>
+														<h3>How CPSs Increase Profitability and Client Retention With Payroll, T&A and HR Services</h3>
+													</div>
+													<!-- <a href="#/" data-color="#1c83c6">Download &gt;</a> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mega-menu__flex">
+									<div class="mega-menu__phrase">
+										<p>listen.</p>
+										<p>adapt.</p>
+										<p>serve.</p>
+									</div>
+									<div class="mega-menu__aside--bottom">
+										<a href="#/">Download<span class="link-arrow"><img src="img/icons/arrow-right-blue--big.svg" alt="Arrow Right Icon" width="10" height="13"></span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__cta-wrapper">
+					<a href="tel:19512841500" class="tel">
+						<img src="img/icons/icon--phone.svg" alt="Icon Phone" width="19" height="19">
+						<div class="tel__number">
+							<p>1-951-284-1500</p>
+						</div>
+					</a>
+					<a href="#/" class="login">Login</a>
+					<button class="button button--bg btn-modal" data-bg-color="#1c83c6" data-color="#fff" data-toggle="modal" data-target="#get-a-demo-modal">Get a Demo</button>
+				</div>
+				<div class="hamburger" id="hamburger-9">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+			</div>
+		</header>
+		<!-- EOF Header -->
+		<main data-post-color="#1c9e87">
+			<!-- Beginning of Page Heading -->
+			<section>
+				<div class="page-heading">
+					<div class="page-heading__bg-image">
+						<img src="img/integrations-cover-image.jpg" alt="">
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center">
+									<h1>Minute to Decimal Conversion
+                                    </h1>
+								    <hr>
+									<p>Track your time
+
+                                    </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF Page Heading -->
+			<!-- Beginning of breadcrumbs section -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<ul class="breadcrumbs">
+								<li class="parent"><a href="index.html">Home</a></li>
+								<li class="parent"><a href="#/">Solutions</a></li>
+								<li class="active">Converter</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF breadcrumbs section -->
+			<!-- Beginning of default section -->
+			<section>
+                <div class="deafult-section" data-bg-color="#f6f8f9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="subtitle">Time Tracking</p>
+        
+                                <h1>
+                                    Minutes to Decimal Calculator
+                                </h1>
+        
+                                <p class="text-center">If you need to convert minutes to decimals for entry into your time and
+                                    attendance solution,
+                                    enter the minutes below to get the decimal conversion or look it up in the table below.
+                                </p>
+        
+        
+                                <fieldset class="converter">
+                                    <!-- <hr> -->
+                                    <!-- <h4>Minutes to Decimal Calculator
+                                    </h4> -->
+                                    <div class="converter__wraper">
+                                        <div class="converter__input-wrapper">
+                                            <input class="converter__input" id="minutes" type="number"><label class="converter__label"
+                                                for="minutes">Minutes
+                                                <span class="sign sign--m">m</span> </label>
+                                        </div>
+        
+                                        <!-- EOF - .input-wrapper -->
+                                         <div class="converter__sign">
+                                            <span class="line-eq"></span>
+                                            <span class="line-eq"></span>
+                                        </div> 
+        
+        
+                                        <div class="converter__input-wrapper">
+                                            <input class="converter__input" id="hours" type="number"><label class="converter__label" for="hours">Hours
+                                                <span class="sign sign--h">h</span> </label>
+                                        </div>
+                                        <!-- EOF - .input-wrapper -->
+        
+                                    </div>
+        
+                                </fieldset>
+                                <!-- EOF - .converter-wrapper -->
+
+                                <div class="convertor-table" width="100%">
+                                    <div class="convertor-table__body">
+                                        <div class="convertor-table__row heading-row">
+                                            <div class="convertor-table__cell"><strong>Minute</strong></div>
+                                            <div class="convertor-table__cell"><strong>Decimal</strong></div>
+                                            <div class="convertor-table__cell"><strong>Minute</strong></div>
+                                            <div class="convertor-table__cell"><strong>Decimal</strong></div>
+                                            <div class="convertor-table__cell"><strong>Minute</strong></div>
+                                            <div class="convertor-table__cell"><strong>Decimal</strong></div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">1</div>
+                                            <div class="convertor-table__cell">0.02</div>
+                                            <div class="convertor-table__cell">21</div>
+                                            <div class="convertor-table__cell">0.35</div>
+                                            <div class="convertor-table__cell">41</div>
+                                            <div class="convertor-table__cell">0.68</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">2</div>
+                                            <div class="convertor-table__cell">0.03</div>
+                                            <div class="convertor-table__cell">22</div>
+                                            <div class="convertor-table__cell">0.37</div>
+                                            <div class="convertor-table__cell">42</div>
+                                            <div class="convertor-table__cell">0.70</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">3</div>
+                                            <div class="convertor-table__cell">0.05</div>
+                                            <div class="convertor-table__cell">23</div>
+                                            <div class="convertor-table__cell">0.38</div>
+                                            <div class="convertor-table__cell">43</div>
+                                            <div class="convertor-table__cell">0.72</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">4</div>
+                                            <div class="convertor-table__cell">0.07</div>
+                                            <div class="convertor-table__cell">24</div>
+                                            <div class="convertor-table__cell">0.40</div>
+                                            <div class="convertor-table__cell">44</div>
+                                            <div class="convertor-table__cell">0.73</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">5</div>
+                                            <div class="convertor-table__cell">0.08</div>
+                                            <div class="convertor-table__cell">25</div>
+                                            <div class="convertor-table__cell">0.42</div>
+                                            <div class="convertor-table__cell">45</div>
+                                            <div class="convertor-table__cell">0.75</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">6</div>
+                                            <div class="convertor-table__cell">0.10</div>
+                                            <div class="convertor-table__cell">26</div>
+                                            <div class="convertor-table__cell">0.43</div>
+                                            <div class="convertor-table__cell">46</div>
+                                            <div class="convertor-table__cell">0.77</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">7</div>
+                                            <div class="convertor-table__cell">0.12</div>
+                                            <div class="convertor-table__cell">27</div>
+                                            <div class="convertor-table__cell">0.45</div>
+                                            <div class="convertor-table__cell">47</div>
+                                            <div class="convertor-table__cell">0.78</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">8</div>
+                                            <div class="convertor-table__cell">0.13</div>
+                                            <div class="convertor-table__cell">28</div>
+                                            <div class="convertor-table__cell">0.47</div>
+                                            <div class="convertor-table__cell">48</div>
+                                            <div class="convertor-table__cell">0.80</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">9</div>
+                                            <div class="convertor-table__cell">0.15</div>
+                                            <div class="convertor-table__cell">29</div>
+                                            <div class="convertor-table__cell">0.48</div>
+                                            <div class="convertor-table__cell">49</div>
+                                            <div class="convertor-table__cell">0.82</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">10</div>
+                                            <div class="convertor-table__cell">0.17</div>
+                                            <div class="convertor-table__cell">30</div>
+                                            <div class="convertor-table__cell">0.50</div>
+                                            <div class="convertor-table__cell">50</div>
+                                            <div class="convertor-table__cell">0.83</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">11</div>
+                                            <div class="convertor-table__cell">0.18</div>
+                                            <div class="convertor-table__cell">31</div>
+                                            <div class="convertor-table__cell">0.52</div>
+                                            <div class="convertor-table__cell">51</div>
+                                            <div class="convertor-table__cell">0.85</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">12</div>
+                                            <div class="convertor-table__cell">0.20</div>
+                                            <div class="convertor-table__cell">32</div>
+                                            <div class="convertor-table__cell">0.53</div>
+                                            <div class="convertor-table__cell">52</div>
+                                            <div class="convertor-table__cell">0.87</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">13</div>
+                                            <div class="convertor-table__cell">0.22</div>
+                                            <div class="convertor-table__cell">33</div>
+                                            <div class="convertor-table__cell">0.55</div>
+                                            <div class="convertor-table__cell">53</div>
+                                            <div class="convertor-table__cell">0.88</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">14</div>
+                                            <div class="convertor-table__cell">0.23</div>
+                                            <div class="convertor-table__cell">34</div>
+                                            <div class="convertor-table__cell">0.57</div>
+                                            <div class="convertor-table__cell">54</div>
+                                            <div class="convertor-table__cell">0.90</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">15</div>
+                                            <div class="convertor-table__cell">0.25</div>
+                                            <div class="convertor-table__cell">35</div>
+                                            <div class="convertor-table__cell">0.58</div>
+                                            <div class="convertor-table__cell">55</div>
+                                            <div class="convertor-table__cell">0.92</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">16</div>
+                                            <div class="convertor-table__cell">0.27</div>
+                                            <div class="convertor-table__cell">36</div>
+                                            <div class="convertor-table__cell">0.60</div>
+                                            <div class="convertor-table__cell">56</div>
+                                            <div class="convertor-table__cell">0.93</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">17</div>
+                                            <div class="convertor-table__cell">0.28</div>
+                                            <div class="convertor-table__cell">37</div>
+                                            <div class="convertor-table__cell">0.62</div>
+                                            <div class="convertor-table__cell">57</div>
+                                            <div class="convertor-table__cell">0.95</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">18</div>
+                                            <div class="convertor-table__cell">0.30</div>
+                                            <div class="convertor-table__cell">38</div>
+                                            <div class="convertor-table__cell">0.63</div>
+                                            <div class="convertor-table__cell">58</div>
+                                            <div class="convertor-table__cell">0.97</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">19</div>
+                                            <div class="convertor-table__cell">0.32</div>
+                                            <div class="convertor-table__cell">39</div>
+                                            <div class="convertor-table__cell">0.65</div>
+                                            <div class="convertor-table__cell">59</div>
+                                            <div class="convertor-table__cell">0.98</div>
+                                        </div>
+                                        <div class="convertor-table__row">
+                                            <div class="convertor-table__cell">20</div>
+                                            <div class="convertor-table__cell">0.33</div>
+                                            <div class="convertor-table__cell">40</div>
+                                            <div class="convertor-table__cell">0.67</div>
+                                            <div class="convertor-table__cell">60</div>
+                                            <div class="convertor-table__cell">1.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- EOF .convertor-table -->
+                            </div>
+                        </div>
+                        <!-- EOF - .row -->
+                    </div>
+                    <!-- EOF - .container-->
+                </div>
+			</section>
+			<!-- EOF default section -->
+			<!-- Beginning of form section -->
+			<section>
+				<div class="deafult-section container-fluid" data-bg-color="#f6f8f9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="default-section__content default-section__content--text-center default-section__content--paragraph-shrink default-section__content--heading-shrink">
+									<p class="subtitle" data-color="#646f79">request a free consultation</p>
+									<h2>Discover How We Can Help Your Business</h2>
+									<p>Quisque ex ante, laoreet cursus neque quis, iaculis tristique tellus. Donec pretium porta lorem, ac pharetra turpis interdum at. Nulla vitae feugiat elit, quis egestas sem.</p>
+								</div>
+								<div class="default-form">
+									<form>
+										<div class="form__input">
+											<input type="text" placeholder="First name *">
+											<input type="text" placeholder="Last name *">
+											<div>
+												<input type="email" placeholder="Email *">
+												<input type="number" placeholder="Phone *">
+											</div>
+											<input type="text" placeholder="Company name *">
+											<div>
+												<input type="text" placeholder="City *">
+												<input type="text" placeholder="State / Region *">
+											</div>
+											<div>
+												<select class="select2-no-search">
+													<option value="" >How did you hear about Timerack</option>
+													<option value="Facebook">Facebook</option>
+													<option value="Advertisment">Advertisment</option>
+													<option value="News">News</option>
+													<option value="Other">Other</option>
+												</select>
+											</div>
+										</div>
+									
+										<button type="submit" class="button button--bg button--center" data-bg-color="#1c83c6" data-color="#fff" style="background: rgb(28, 131, 198); color: rgb(255, 255, 255);">
+										Submit
+										<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="11" height="17"> 
+										</button>
+
+										<p>We’ll contact you shortly.</p>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF form section -->
+			<!-- Beginning of Case Study section -->
+			<section class="cccc" data-bg-color="#fff">
+				<div class="deafult-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="case-studies-wrapper">
+									<div class="case-study__heading">
+										<p class="subtitle" data-color="#646f79">Case study</p>
+										<h2>We Helped Drager Manage Their Time Efficiently</h2>
+										<div class="case-study__img">
+											<img class="case-study-logo" src="img/logos/drager.png" alt="logo" width="auto" height="55">
+											<img class="case-study-img" src="img/cardImage20.jpg" alt="Image" width="450" height="300">
+										</div>
+									</div>
+									<div class="case-study__desc">
+										<h3>Maecenas Ipsum</h3>
+										<p>Maecenas ipsum nunc, fermentum quis semper vitae, rhoncus vitae sapien. Cras imperdiet mauris.</p>
+										<hr>
+										<h3>Mauris Dapibus</h3>
+										<p>Pellentesque mollis quis dolor id fermentum. Duis in lacus egestas, dapibus lectus in.</p>
+										<a href="#/" data-color="#1c83c6">
+										View Detailed Case Study
+										<img class="ml10" src="img/icons/arrow-right-blue--big.svg" alt="Arrow Icon right icon" width="10" height="16">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF Case Study section -->
+			<!-- Beginning of Industries Slider -->
+			<section>
+				<div class="industries-slider-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="industries-slider-wrapper">
+									<div class="industries-slider__heading">
+										<div>
+											<p class="subtitle">Download</p>
+											<h2>Get T&L Whitepapers</h2>
+										</div>
+										<div class="industries-slider__arrows">
+											<div class="industries-slider__arrow industries-slider__arrow--prev">
+												<img src="img/icons/arrow-right-white--big.svg" alt="Arrow Left Icon" width="11" height="17">
+											</div>
+											<div class="industries-slider__arrow industries-slider__arrow--next">
+												<img src="img/icons/arrow-right-white--big.svg" alt="Arrow Left Icon" width="11" height="17">
+											</div>
+										</div>
+									</div>
+									<div class="industries-slider">
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage5.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">white papers</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Download
+												<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage9.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">white papers</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Download
+												<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage7.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">white papers</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Download
+												<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage4.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">white papers</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Download
+												<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+									</div>
+									<div class="industries-slider__arrows industries-slider__arrows--responsive">
+										<div class="industries-slider__arrow industries-slider__arrow--prev">
+											<img src="img/icons/arrow-right-white--big.svg" alt="Arrow Left Icon" width="11" height="17">
+										</div>
+										<div class="industries-slider__arrow industries-slider__arrow--next">
+											<img src="img/icons/arrow-right-white--big.svg" alt="Arrow Left Icon" width="11" height="17">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF Industries Slider -->
+			<!-- Beginning of Industries Slider -->
+			<section>
+				<div class="blog-slider-section" data-bg-color="#f6f8f9">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="blog-slider-wrapper">
+									<div class="blog-slider__heading">
+										<p class="subtitle">Resources</p>
+										<h2>Explore Other T&L Resources</h2>
+									</div>
+									<div class="blog-slider">
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage14.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">blog</p>
+													<a href="#/">
+														<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+													</a>
+												</div>
+												<a href="#/">
+												View
+												<img class="ml10" src="img/icons/arrow-right-blue--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage6.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">videos</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Watch
+												<img class="ml10" src="img/icons/arrow-right-blue--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage13.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">employer guides</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Read
+												<img class="ml10" src="img/icons/arrow-right-blue--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+										<!-- Beginning of slider card -->
+										<div class="default-slider-card">
+											<div class="default-slider-card__img">
+												<figure>
+													<img src="img/cardImage2.jpg" alt="Thomson Reuters logo" width="410" height="300">
+												</figure>
+											</div>
+											<div class="default-slider-card__desc">
+												<div>
+													<p class="subtitle">blog</p>
+													<a href="#/">
+														<h3>Integration With Time Rack and Thomson Reuters</h3>
+													</a>
+												</div>
+												<a href="#/">
+												Read
+												<img class="ml10" src="img/icons/arrow-right-blue--big.svg" alt="Arrow Icon right icon" width="9" height="14">
+												</a>
+											</div>
+										</div>
+										<!-- EOF slider card -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- EOF Industries Slider -->        
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer__schadule-a-demo">
+							<h2 data-color="#fff">Get Started Now</h2>
+							<a href="#/" class="button button--border" data-color="#fff">
+							Schadule a Demo
+							<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="11" height="17">
+							</a>
+						</div>
+						<div class="footer__nav">
+							<div class="footer__list">
+								<ul>
+									<li><a href="/#">About</a></li>
+									<li><a href="/#">Our Team</a></li>
+									<li><a href="/#">Careers</a></li>
+									<li><a href="/#">Contac us</a></li>
+								</ul>
+							</div>
+							<div class="footer__list">
+								<ul>
+									<li><a href="/#">Solutions</a></li>
+									<li><a href="/#">T&A Software</a></li>
+									<li><a href="/#">Mobile App</a></li>
+									<li><a href="/#">Data Collection/Hardware</a></li>
+									<li><a href="/#">COVID Return to Work</a></li>
+								</ul>
+							</div>
+							<div class="footer__list">
+								<ul>
+									<li><a href="/#">Industries</a></li>
+									<li><a href="/#">Staffing</a></li>
+									<li><a href="/#">Small Businesses</a></li>
+									<li><a href="/#">Offices</a></li>
+									<li><a href="/#">Warehouses & Manufacturing</a></li>
+									<li><a href="/#">Healthcare</a></li>
+									<li><a href="/#">Restaurants & Hospitality</a></li>
+									<li><a href="/#">Retail</a></li>
+								</ul>
+							</div>
+							<div class="footer__list">
+								<ul>
+									<li><a href="/#">Partner Programs</a></li>
+									<li><a href="/#">Channel Partner Programs</a></li>
+									<li><a href="/#">Integration Partners</a></li>
+									<li><a href="/#">CPA Partner Program</a></li>
+								</ul>
+							</div>
+							<div class="footer__list">
+								<ul>
+									<li><a href="/#">Resources</a></li>
+									<li><a href="/#">White Papers</a></li>
+									<li><a href="/#">Employer Guides</a></li>
+									<li><a href="/#">Videos</a></li>
+									<li><a href="/#">Blogs</a></li>
+									<li><a href="/#">Case Studies</a></li>
+									<li><a href="/#">Covid-19 Resources</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="store-wrapper">
+							<a href="#/">
+							<img src="img/logos/playStore.png" alt="Google Play Store icon" width="140" height="42">
+							</a>
+							<a href="#/">
+							<img src="img/logos/appStore.png" alt="Apple Store icon" width="140" height="42">
+							</a>
+						</div>
+						<div class="sub-footer sub-footer--border" data-border-color="#dbdde2">
+							<div class="terms-box">
+								<ul>
+									<li><a href="#/">Terms</a></li>
+									<li><a href="#/">Privacy</a></li>
+								</ul>
+							</div>
+							<div class="social-box">
+								<a href="#/">
+								<i class="fab fa-facebook-f"></i>
+								</a>
+								<a href="#/">
+								<i class="fab fa-linkedin-in"></i>
+								</a>
+								<a href="#/">
+								<i class="fab fa-twitter"></i>
+								</a>
+								<a href="#/">
+								<i class="fab fa-youtube"></i>
+								</a>
+							</div>
+							<div class="rating-box">
+								<img src="img/logos/captera-ratings.png" alt="Captera rating" width="156" height="60">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub-footer sub-footer--height" data-bg-color="#121a26">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="sub-footer__wrapper">
+								<a href="index.html">
+								<img src="img/logos/timerackLogo-negative-big.svg" alt="Timerack Logo" width="140"
+									height="30">
+								</a>
+								<p data-color="#646f79">Copyright C 2020 Timerack, All right reserved | Powered by <a class="powered-by"
+									href="https://eximius-solutions.com/" target="blank">Eximius</a></p>
+								<img src="img/logos/noncpa-soclogo.png" alt="Aicpa Soc logo" width="80px" height="80px">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Modal -->
+		<div class="modal fade" id="get-a-demo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bg-image="url(img/modal-bg.jpg)">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="modal-dialog" role="document">
+							<div class="modal-body">
+								<div class="modal-body__heading">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close">
+									<span aria-hidden="true">
+									<img src="img/icons/close-icon.png" alt="Close Icon" width="18" height="18">
+									Close
+									</span>
+									</button>
+									<h2>Share your T&A and payroll headaches with Timerack</h2>
+									<hr>
+									<p>Request a personalized demo by filling out the form.</p>
+								</div>
+								<div class="modal-body__form">
+									<form>
+										<div class="form__check form__check--top">
+											<p>Solutions you are interested in (at least one):<span data-color="#1c83c5">*</span></p>
+											<div>
+												<input type="checkbox" id="exampleCheck1">
+												<label for="exampleCheck1">T&A Software</label>
+											</div>
+											<div>
+												<input type="checkbox" id="exampleCheck2">
+												<label for="exampleCheck2">HR Services</label>
+											</div>
+											<div>
+												<input type="checkbox" id="exampleCheck3">
+												<label for="exampleCheck3">Mobile App</label>
+											</div>
+											<div>
+												<input type="checkbox" id="exampleCheck4">
+												<label for="exampleCheck4">Data Collection - Hardware</label>
+											</div>
+										</div>
+										<div class="form__input">
+											<input type="text" placeholder="First name *">
+											<input type="text" placeholder="Last name *">
+											<div>
+												<input type="email" placeholder="Email *">
+												<input type="number" placeholder="Phone *">
+											</div>
+											<input type="text" placeholder="Compny name *">
+											<div>
+												<input type="text" placeholder="City name *">
+												<input type="text" placeholder="State / Region *">
+											</div>
+										</div>
+										<div class="form__check form__check--bottom">
+											<input type="checkbox" id="exampleCheck5">
+											<label for="exampleCheck5">Yes, I'd like to receive helpful resources like whitepapers, employer guides or videos (you can opt any time).View our <a href="#/">privacy policy</a>.</label>
+										</div>
+										<a href="#/" class="button button--bg button--center" data-bg-color="#22b24c" data-color="#fff">
+										Get a Demo
+										<img class="ml10" src="img/icons/arrow-right-white--big.svg" alt="Arrow Icon right icon" width="11" height="17"> 
+										</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Dropdown overlay -->
+		<div class="dropdown-overlay"></div>
+		<script src="js/jquery-3.5.1.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.js"></script>
+		<script src="js/init-slider.js"></script>
+		<script src="js/select2.js"></script>
+		<script src="js/init-dropdown.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/converter.js"></script>
+	</body>
+</html>

@@ -15,7 +15,10 @@
 
     var inputMinutes = document.getElementById('minutes');
     var inputHours = document.getElementById('hours');
-
+    var regex = /^[0-9]+$/;
+    // Reset values
+    inputMinutes.value = null;
+    inputHours.value = null;
 
     /**
      * Convert minutes  to decimal hours
@@ -24,7 +27,9 @@
      */
     function toHours(input) {
         let valMinutes = input.value;
-        if (valMinutes == "" || valMinutes == null) { inputHours.value = ''; return }
+
+        if (valMinutes == "" || valMinutes == null) { inputHours.value = ''; input.value = ''; return };
+
         let hours = Math.round(valMinutes) / 60;
         inputHours.value = hours.toFixed(2);
     }
@@ -35,8 +40,10 @@
      * Takes input from whom event is trigered
      */
     function toMinutes(input) {
+
         let valHours = input.value;
-        if (valHours == "" || valHours == null) { inputMinutes.value = ''; return }
+
+        if (valHours == "") { inputMinutes.value = ''; input.value = ''; return };
         inputMinutes.value = valHours * 60;
     }
 
@@ -103,6 +110,8 @@
 
     inputHours.addEventListener('blur', function () {
         addSign(inputMinutes);
-    })
+    });
+
+ 
 
 })();

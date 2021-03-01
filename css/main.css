@@ -34,7 +34,7 @@
 
 body {
     font-family: "Popins";
-    color: var(--dark-gray);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +73,41 @@ h4 {
     text-align: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button {
+
+/* 3. # Converter Block */
+
+.converter {
+    max-width: 600px;
+    margin: 100px auto 100px;
+}
+
+.converter hr:first-of-type {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient( 90deg, rgba(28, 131, 198, 1) 0%, rgba(34, 178, 76, 1) 100%);
+    margin: 40px auto 40px;
+}
+
+.converter__wraper {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.converter h3, .converter h4 {
+    text-align: center;
+}
+
+.converter__input-wrapper {
+    position: relative;
+}
+
+.deafult-section h1, .deafult-section.subtitle {
+    text-align: center;
+}
+
+input[type="number"].converter__input::-webkit-inner-spin-button, input[type="number"].converter__input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -96,51 +130,12 @@ input[type="number"].converter__input {
 }
 
 input[type="number"].converter__input:focus {
-    outline: none;
+    outline-eq: none;
     border: 1px solid var(--dark-gray);
 }
-
-/* 3. # Converter Block */
-
-.deafult-section {
-    background-color: var(--light-gray);
-    padding: var(--section-padding);
-}
-
-.converter {
-    max-width: 600px;
-    margin: 0px auto 100px;
-}
-
-hr:first-of-type {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient( 90deg, rgba(28, 131, 198, 1) 0%, rgba(34, 178, 76, 1) 100%);
-    margin: 40px auto 56px;
-}
-
-.converter__wraper {
-    position: relative;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.converter h3, .converter h4 {
-    text-align: center;
-}
-
-.converter__input-wrapper {
-    position: relative;
-}
-
-.deafult-section h1, .deafult-section.subtitle {
-    text-align: center;
-}
-
 .converter__label {
     position: absolute;
-    top: calc(50%);
+    top: 50%;
     display: block;
     margin: 0;
     padding-left: 25px;
@@ -153,6 +148,10 @@ hr:first-of-type {
     pointer-events: none;
     text-align: left;
     text-transform: uppercase;
+}
+
+.converter__label.is-moved {
+    top: 40%;
 }
 
 .converter__label.active:not(.is-moved) {
@@ -194,22 +193,22 @@ hr:first-of-type {
     position: relative;
 }
 
-.line {
+.line-eq {
     position: absolute;
-    left: calc(50% - 15px);
+    left: calc(50% - 13px);
     display: block;
     height: 4px;
-    width: 30px;
+    width: 26px;
     background-color: var(--blue);
     border-radius: 7px;
     z-index: 3;
 }
 
-.line:nth-child(1) {
+.line-eq:nth-child(1) {
     top: calc(50% - 8px);
 }
 
-.line:nth-child(2) {
+.line-eq:nth-child(2) {
     bottom:  calc(50% - 8px);
 }
 
@@ -227,25 +226,8 @@ input[type="number"]:focus~.converter__label {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    .converter__wraper {
-        flex-direction: column;
-        height: 180px;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .line {
-        position: relative;
-    }
-    .line:nth-child(2) {
-        bottom: -5px;
-    }
-    .line:nth-child(1) {
-        bottom: 5px;
-    }
-}
 
-/* 5. #  Table CSS */
+/* 5. ## Convertor  Table CSS */
 
 .convertor-table {
     display: table;
@@ -259,7 +241,7 @@ input[type="number"]:focus~.converter__label {
 }
 
 .convertor-table__row:nth-child(2n) {
-    background-color: #fff;
+    background-color: #f6f6f6;
 }
 
 .convertor-table__cell {
@@ -288,7 +270,24 @@ input[type="number"]:focus~.converter__label {
     color: #fff;
 }
 
+/* ## Minute to decimal responsive */
+
 @media (max-width: 767px) {
+    .converter__wraper {
+        flex-direction: column;
+        height: 180px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .line-eq {
+        position: relative;
+    }
+    .line-eq:nth-child(2) {
+        bottom: -5px;
+    }
+    .line-eq:nth-child(1) {
+        bottom: 5px;
+    }
     .heading-row {
         display: none !important;
     }
