@@ -8,7 +8,7 @@
             1: # Variables ( Input Elements )
             2: # To hours  ( function ) - tranlsates minutes to hours
             3: # To minutes ( function ) - translates hours to minutes
-            4: # Animation ( function ) - Hide / Show label if input is empty / has value
+            4: # animate ( function ) - Hide / Show label if input is empty / has value
             5: # addSign ( function ) - Add equal signt to label elemnt
         }
     */
@@ -45,7 +45,7 @@
      * @param {element} input 
      * Takes input elemnt from whom event is trigered
      */
-    function animation(input) {
+    function animate(input) {
         let val = input.value;
         let label = input.nextElementSibling;
 
@@ -77,13 +77,14 @@
     // Input event
     inputMinutes.addEventListener('input', function () {
         toHours(this);
-        animation(inputHours);
-        animation(this);
+        animate(inputHours);
+        animate(this);
     });
+
     inputHours.addEventListener('input', function () {
         toMinutes(this);
-        animation(inputMinutes);
-        animation(this);
+        animate(inputMinutes);
+        animate(this);
     });
 
     // Focus event
